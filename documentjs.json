@@ -1,0 +1,14 @@
+{
+  "sites": {
+    "docs": {
+      "dest": "docs",
+      "parent": "cd-place-my-order",
+      "pageConfig": {
+        "page": "docs"
+      },
+      "glob": {
+        "pattern": "donejs develop/**/*.{js,md}"
+      }
+    }
+  }
+}

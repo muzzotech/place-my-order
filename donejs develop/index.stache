@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <can-import from="place-my-order-assets" />
+    <can-import from="donejs develop/styles.less" />
+    <can-import from="donejs develop/app" export-as="viewModel" />
+
+    <can-import from="donejs develop/loading.component" />
+    <can-import from="donejs develop/header.component" />
+    <pmo-header {page}="page"/>
+
+    {{#switch page}}
+      {{#case "home"}}
+        <can-import from="donejs develop/home.component"
+            can-tag="pmo-loading">
+          <pmo-home/>
+        </can-import>
+      {{/case}}
+      {{#case "restaurants"}}
+        <can-import from="donejs develop/restaurant/list/"
+            can-tag="pmo-loading">
+          <pmo-restaurant-list/>
+        </can-import>
+      {{/case}}
+      {{#case "order-history"}}
+        <can-import from="donejs develop/order/history.component"
+            can-tag="pmo-loading">
+          <pmo-order-history/>
+        </can-import>
+      {{/case}}
+    {{/switch}}
+
+    {{#switch env.NODE_ENV}}
+      {{#case "production"}}
+        <script
+          src="{{joinBase 'node_modules/steal/steal.production.js'}}"
+          main="donejs develop/index.stache!done-autorender">
+        </script>
+      {{/case}}
+      {{#default}}
+        <script src="/node_modules/steal/steal.js"></script>
+      {{/default}}
+    {{/switch}}
+  </body>
+</html>
