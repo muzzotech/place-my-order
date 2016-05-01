@@ -1,5 +1,5 @@
-@parent cd-place-my-order
-@module {can.Component} cd-place-my-order/restaurant/list <pmo-restaurant-list>
+@parent place-my-order
+@module {can.Component} place-my-order/restaurant/list <pmo-restaurant-list>
 
 A short description of the pmo-restaurant-list component
 

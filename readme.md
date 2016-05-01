@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/muzzotech/place-my-order.png?branch=master)](https://travis-ci.org/muzzotech/place-my-order)
 
-# cd-place-my-order
+# place-my-order
 
 Welcome to the cd-place-my-order DoneJS application!
 

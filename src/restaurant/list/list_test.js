@@ -1,7 +1,7 @@
 import QUnit from 'steal-qunit';
-import cityStore from 'donejs develop/models/fixtures/city';
-import stateStore from 'donejs develop/models/fixtures/state';
-import restaurantStore from 'donejs develop/models/fixtures/restaurant';
+import cityStore from 'place-my-order/models/fixtures/city';
+import stateStore from 'place-my-order/models/fixtures/state';
+import restaurantStore from 'place-my-order/models/fixtures/restaurant';
 import { ViewModel } from './list';
 
 QUnit.module('donejs develop/restaurant/list', {
