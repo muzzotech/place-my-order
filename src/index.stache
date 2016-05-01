@@ -5,28 +5,28 @@
   </head>
   <body>
     <can-import from="place-my-order-assets" />
-    <can-import from="donejs develop/styles.less" />
-    <can-import from="donejs develop/app" export-as="viewModel" />
+    <can-import from="place-my-order/styles.less" />
+    <can-import from="place-my-order/app" export-as="viewModel" />
 
-    <can-import from="donejs develop/loading.component" />
-    <can-import from="donejs develop/header.component" />
+    <can-import from="place-my-order/loading.component" />
+    <can-import from="place-my-order/header.component" />
     <pmo-header {page}="page"/>
 
     {{#switch page}}
       {{#case "home"}}
-        <can-import from="donejs develop/home.component"
+        <can-import from="place-my-order/home.component"
             can-tag="pmo-loading">
           <pmo-home/>
         </can-import>
       {{/case}}
       {{#case "restaurants"}}
-        <can-import from="donejs develop/restaurant/list/"
+        <can-import from="place-my-order/restaurant/list/"
             can-tag="pmo-loading">
           <pmo-restaurant-list/>
         </can-import>
       {{/case}}
       {{#case "order-history"}}
-        <can-import from="donejs develop/order/history.component"
+        <can-import from="place-my-order/order/history.component"
             can-tag="pmo-loading">
           <pmo-order-history/>
         </can-import>
@@ -37,7 +37,7 @@
       {{#case "production"}}
         <script
           src="{{joinBase 'node_modules/steal/steal.production.js'}}"
-          main="donejs develop/index.stache!done-autorender">
+          main="place-my-order/index.stache!done-autorender">
         </script>
       {{/case}}
       {{#default}}

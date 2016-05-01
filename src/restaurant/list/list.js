@@ -2,9 +2,9 @@ import Component from 'can/component/';
 import Map from 'can/map/';
 import 'can/map/define/';
 import template from './list.stache';
-import Restaurant from 'donejs develop/models/restaurant';
-import State from 'donejs develop/models/state';
-import City from 'donejs develop/models/city';
+import Restaurant from 'place-my-order/models/restaurant';
+import State from 'place-my-order/models/state';
+import City from 'place-my-order/models/city';
 
 export var ViewModel = Map.extend({
   define: {

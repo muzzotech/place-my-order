@@ -1,5 +1,5 @@
 {
-  "name": "cd-place-my-order",
+  "name": "place-my-order",
   "version": "0.0.0",
   "description": "",
   "homepage": "",
@@ -10,21 +10,21 @@
   },
   "scripts": {
     "api": "place-my-order-api --port 7070",
-    "test": "testee donejs develop/test.html --browsers firefox --reporter Spec",
+    "test": "testee src/test.html --browsers firefox --reporter Spec",
     "start": "done-serve --proxy http://localhost:7070 --port 8080",
     "develop": "done-serve --develop --proxy http://localhost:7070 --port 8080",
     "document": "documentjs",
     "build": "node build"
   },
-  "main": "cd-place-my-order/index.stache!done-autorender",
+  "main": "place-my-order/index.stache!done-autorender",
   "files": [
     "donejs develop"
   ],
   "keywords": [],
   "system": {
-    "main": "cd-place-my-order/index.stache!done-autorender",
+    "main": "place-my-order/index.stache!done-autorender",
     "directories": {
-      "lib": "donejs develop"
+      "lib": "src"
     },
     "configDependencies": [
       "live-reload",
